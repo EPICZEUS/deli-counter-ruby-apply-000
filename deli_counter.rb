@@ -1,8 +1,8 @@
 # Write your code here.
 
 def line(deli)
-  if deli.length == 0
-    puts "The line is currently empty."
+  puts if deli.length == 0
+    "The line is currently empty."
   else
     out = "The line is currently:"
     i = 0
@@ -10,19 +10,19 @@ def line(deli)
       out += " #{i + 1}. #{deli[i]}"
       i += 1
     end
-    puts out
+    out
   end
 end
 
 def take_a_number(deli, name)
-  deli.push(name)
+  deli << name
   puts "Welcome, #{name}. You are number #{deli.length} in line."
 end
 
 def now_serving(deli)
-  if deli.length == 0
-    puts "There is nobody waiting to be served!"
+  puts if deli.length == 0
+    "There is nobody waiting to be served!"
   else
-    puts "Currently serving #{deli.shift}."
+    "Currently serving #{deli.shift}."
   end
 end
